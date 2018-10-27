@@ -22,6 +22,16 @@ fields:
             drinks: Drinks
             alcoholicDrinks: Alcoholic
             houseCleaning: 'House Cleaning Products'
+            accessories: Accessories
+            womenClothing: 'Women Clothing'
+            menClothing: 'Men Clothing'
+            footwear: Footwear
+            childClothing: 'Children Clothing'
+            phone: Phone
+            printer: Printer
+            mouse: Mouse
+            keyboard: Keyboard
+            laptop: Laptop
         span: auto
         type: dropdown
     retailer_category:

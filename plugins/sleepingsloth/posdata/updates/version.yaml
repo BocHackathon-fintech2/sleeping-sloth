@@ -3,3 +3,12 @@
 1.0.2:
     - 'Created table sleepingsloth_posdata_'
     - builder_table_create_sleepingsloth_posdata_.php
+1.0.3:
+    - 'Created table sleepingsloth_posdata_receipts'
+    - builder_table_create_sleepingsloth_posdata_receipts.php
+1.0.4:
+    - 'Created table sleepingsloth_posdata_receipts_items'
+    - builder_table_create_sleepingsloth_posdata_receipts_items.php
+1.0.5:
+    - 'Updated table sleepingsloth_posdata_receipts'
+    - builder_table_update_sleepingsloth_posdata_receipts.php
