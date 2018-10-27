@@ -1,0 +1,45 @@
+fields:
+    name:
+        label: 'Item Name'
+        span: auto
+        type: text
+    description:
+        label: 'Item Description'
+        span: auto
+        type: text
+    price:
+        label: Price
+        span: auto
+        type: text
+    vat:
+        label: VAT
+        span: auto
+        type: text
+    item_category:
+        label: 'Item Category'
+        options:
+            freshFood: 'Fresh Food'
+            drinks: Drinks
+            alcoholicDrinks: Alcoholic
+            houseCleaning: 'House Cleaning Products'
+        span: auto
+        type: dropdown
+    retailer_category:
+        label: 'Retailer Category'
+        options:
+            0: Supermarket
+            1: 'Clothing Shop'
+            3: 'Electronics Shop'
+        span: auto
+        type: dropdown
+    logo:
+        label: Logo
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

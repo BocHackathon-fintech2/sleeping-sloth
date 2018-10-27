@@ -1,0 +1,12 @@
+list: $/sleepingsloth/posdata/models/pos/columns.yaml
+modelClass: Sleepingsloth\Posdata\Models\POS
+title: POS
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'sleepingsloth/posdata/pos/update/:id'

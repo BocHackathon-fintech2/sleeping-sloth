@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    description:
+        label: description
+        type: text
+    price:
+        label: price
+        type: text
+    vat:
+        label: vat
+        type: text
+    item_category:
+        label: item_category
+        type: text
+    retailer_category:
+        label: retailer_category
+        type: text

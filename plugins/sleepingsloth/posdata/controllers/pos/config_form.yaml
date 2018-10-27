@@ -1,0 +1,10 @@
+name: POS
+form: $/sleepingsloth/posdata/models/pos/fields.yaml
+modelClass: Sleepingsloth\Posdata\Models\POS
+defaultRedirect: sleepingsloth/posdata/pos
+create:
+    redirect: 'sleepingsloth/posdata/pos/update/:id'
+    redirectClose: sleepingsloth/posdata/pos
+update:
+    redirect: sleepingsloth/posdata/pos
+    redirectClose: sleepingsloth/posdata/pos

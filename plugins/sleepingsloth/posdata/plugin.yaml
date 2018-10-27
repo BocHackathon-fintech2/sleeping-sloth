@@ -1,0 +1,11 @@
+plugin:
+    name: 'sleepingsloth.posdata::lang.plugin.name'
+    description: 'sleepingsloth.posdata::lang.plugin.description'
+    author: SleepingSloth
+    icon: oc-icon-database
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'POS Setup'
+        url: sleepingsloth/posdata/pos
+        icon: icon-list-ol
