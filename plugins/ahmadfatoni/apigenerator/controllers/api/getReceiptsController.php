@@ -1,4 +1,7 @@
 <?php namespace AhmadFatoni\ApiGenerator\Controllers\API;
+header("Access-Control-Allow-Origin: *");
+
+use DB;
 
 use Cms\Classes\Controller;
 use BackendMenu;
@@ -20,11 +23,11 @@ class getReceiptsController extends Controller
         $this->helpers          = $helpers;
     }
 
-    public function index(){
-
-        $data = $this->ApiGenerator->all()->toArray();
-
-        return $this->helpers->apiArrayResponseBuilder(200, 'success', $data);
+    public function index(Request $request){
+		
+		$id = $request->id;
+		
+       return Db::select('select * from sleepingsloth_posdata_receipts WHERE customer_id="'.$id.'" ');
     }
 
     public function show($id){
