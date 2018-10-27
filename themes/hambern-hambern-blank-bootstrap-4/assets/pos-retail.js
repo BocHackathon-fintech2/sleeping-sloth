@@ -36,8 +36,8 @@ $(document).ready( function(){
         $(document).on("click","#sendReceiptBtn",function() {
              var total = parseFloat($("#totalPrice").val());
              var phone = $("#phone").val();
-             var category = "Supermarket";
-             var vendorName = "My Cheap Supermarket";
+             var category = "Clothing Store";
+             var vendorName = "Clothing Store";
              var location = "Nicosia";
              
              

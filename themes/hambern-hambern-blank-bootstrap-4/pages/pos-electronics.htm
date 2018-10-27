@@ -1,5 +1,5 @@
-title = "Pos Retail"
-url = "/pos-retail"
+title = "Pos Electronics"
+url = "/pos-electronics"
 layout = "default"
 is_hidden = 0
 
@@ -16,7 +16,7 @@ sortColumn = "name"
 ==
 <?php
 function onStart(){
-     $this->addJs('assets/pos-retail.js');
+     $this->addJs('assets/pos-electronics.js');
 }
 
 
@@ -67,7 +67,7 @@ function onSendItem(){
     <h2>My Cheap Supermarket</h2>
   
      {% for record in records %}  
-         {% if record.retailer_category == "1" %}
+         {% if record.retailer_category == "3" %}
             <div class="itemDiv" style="background-color:white; width:200px; float:left;  cursor:pointer; margin:6px;" data-price="{{record.price}}" data-name={{record.name}} data-category={{record.item_category}}>
               <img class="" src=" {{record.logo.path }}" width="200px" height="150px" alt="Card image cap">
               <div style="text-align:center;">
@@ -117,11 +117,6 @@ function onSendItem(){
 </div>
 
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

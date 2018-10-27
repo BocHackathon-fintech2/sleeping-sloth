@@ -36,9 +36,9 @@ $(document).ready( function(){
         $(document).on("click","#sendReceiptBtn",function() {
              var total = parseFloat($("#totalPrice").val());
              var phone = $("#phone").val();
-             var category = "Supermarket";
-             var vendorName = "My Cheap Supermarket";
-             var location = "Nicosia";
+             var category = "Electronic Store";
+             var vendorName = "Electronics Store";
+             var location = "Paphos";
              
              
             $.request('onSendReceipt', {
@@ -78,7 +78,8 @@ $(document).ready( function(){
                                 }
                                counter = 1; 
                              });//end for tr
-                                 $('#exampleModal').modal('hide');
+                            
+                                $('#exampleModal').modal('hide');
                          })
                    }});
                    

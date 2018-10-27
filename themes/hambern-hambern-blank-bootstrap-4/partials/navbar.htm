@@ -4,14 +4,17 @@ description = "Navigation bar"
 	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="{{ 'pos'|page }}">myPOS</a>
-			{#<ul class="nav navbar-nav pull-xs-right">
-				<li class="nav-item{{ this.page.baseFileName == 'features' ? ' active' }}">
-					<a class="nav-link" href="{{ 'features'|page }}">Features</a>
+			<ul class="nav navbar-nav pull-xs-right">
+				<li class="nav-item{{ this.page.baseFileName == 'pos' ? ' active' }}">
+					<a class="nav-link" href="{{ 'pos'|page }}">Supermarket</a>
 				</li>
-				<li class="nav-item{{ this.page.baseFileName == 'author' ? ' active' }}">
-					<a class="nav-link" href="{{ 'author'|page }}">Author</a>
+				<li class="nav-item{{ this.page.baseFileName == 'pos-retail' ? ' active' }}">
+					<a class="nav-link" href="{{ 'pos-retail'|page }}">Clothing Store</a>
 				</li>
-			</ul>#}
+				<li class="nav-item{{ this.page.baseFileName == 'pos-retail' ? ' active' }}">
+					<a class="nav-link" href="{{ 'pos-electronics'|page }}">Electronics Store</a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 </section>
