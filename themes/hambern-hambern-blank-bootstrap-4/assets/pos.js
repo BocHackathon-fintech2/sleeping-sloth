@@ -16,6 +16,7 @@ $(document).ready( function(){
      $(document).on("click",".paymentMethod",function() {
       // $('#receiptMethod1, #receiptMethod2').show();
        $('#exampleModal').modal('show');
+        $('#phoneNumberDiv').hide();
     });
     
          $(document).on("click","#digitalRBtn",function() {
