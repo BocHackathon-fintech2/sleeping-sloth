@@ -18,6 +18,17 @@ $(document).ready( function(){
        $('#exampleModal').modal('show');
     });
     
+         $(document).on("click","#digitalRBtn",function() {
+      // $('#receiptMethod1, #receiptMethod2').show();
+       $('#phoneNumberDiv').show();
+    });
+    
+    
+    $(document).on("click","#sendReceipt",function() {
+      // $('#receiptMethod1, #receiptMethod2').show();
+       $('#phoneNumberDiv').show();
+    });
+    
     
     
 });

@@ -99,12 +99,17 @@ function onStart(){
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" style="height:80px;">
+      <div class="modal-body" style="min-height:80px;">
           <div id="receiptMethod1" style="width:50%; float:left; margin-bottom:4px; padding:5px;">
               <button type="button" class="btn btn-info btn-block">Physical Receipt</button>  
             </div>
         <div  id="receiptMethod2" style="width:50%; float:left; margin-bottom:4px; padding:5px;">
-            <button type="button" class="btn btn-info btn-block">Digital Receipt</button>  
+            <button id="digitalRBtn" type="button" class="btn btn-info btn-block">Digital Receipt</button>  
+        </div>
+        
+        <div id="phoneNumberDiv" style="width:100%; display:none;">
+              <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon1">
+                  <button type="button" class="btn btn-info btn-block" style="margin-top:4px;">Send Receipt</button>  
         </div>
       </div>
   
