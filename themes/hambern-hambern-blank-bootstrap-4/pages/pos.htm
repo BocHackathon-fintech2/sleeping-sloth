@@ -18,6 +18,21 @@ sortColumn = "name"
 function onStart(){
      $this->addJs('assets/pos.js');
 }
+
+function onSendReceipt(){
+    $total = $_POST["total"];  
+    $phone = $_POST["phone"];   
+    $category = $_POST["category"];   
+    $vendorName = $_POST["vendorName"];   
+    $location = $_POST["location"];     
+    $date = date('Y-m-d H:i:s');    
+        
+    $id = Db::table('sleepingsloth_posdata_receipts')->insertGetId(
+        ['total' => $total, 'customer_id' => $phone, 'vendor_category' => $category, 'vendor_name' => $vendorName, 'location' => $location, 'date' => $date]
+    );
+    
+    return $id;
+}
 ?>
 ==
 {% set records = posItems.records %}
@@ -30,7 +45,7 @@ function onStart(){
 
 <div class="row">
   <div class="columnLeft" style="min-height:1000px; background-color:#f2f2f2; border-right:2px solid #CCC;">
-    <h2>Products</h2>
+    <h2>My Cheap Supermarket</h2>
   
      {% for record in records %}  
          {% if record.retailer_category == "0" %}
@@ -109,8 +124,8 @@ function onStart(){
         
         <div id="phoneNumberDiv" style="width:100%; display:none;">
             <h5>Using telephone number:</h5>
-              <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon1">
-                  <button type="button" class="btn btn-success btn-block" style="margin-top:4px;">Send Receipt</button>  
+              <input id="phone" type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon1">
+                  <button id="sendReceiptBtn" type="button" class="btn btn-success btn-block" style="margin-top:4px;">Send Receipt</button>  
                   <hr />
                   <h5>Using NFC:</h5>
                <button type="button" class="btn btn-primary btn-block" style="margin-top:4px;">NFC</button>  

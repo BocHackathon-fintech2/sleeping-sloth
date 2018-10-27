@@ -31,5 +31,25 @@ $(document).ready( function(){
     });
     
     
+        $(document).on("click","#sendReceiptBtn",function() {
+             var total = parseFloat($("#totalPrice").val());
+             var phone = $("#phone").val();
+             var category = "Supermarket";
+             var vendorName = "My Cheap Supermarket";
+             var location = "Nicosia";
+             
+             
+            $.request('onSendReceipt', {
+                   //pass the inputed data code & descritpion to the ajax call
+                   data: { total: total, phone: phone, category: category, vendorName: vendorName, location:location  },
+                   success: function(data) {
+                         this.success(data).done(function() {
+                            
+                         })
+                   }});
+                   
+        });
+    
+    
     
 });
