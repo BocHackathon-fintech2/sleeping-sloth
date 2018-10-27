@@ -1,0 +1,4 @@
+title: Receipts
+modelClass: Sleepingsloth\Posdata\Models\Receipts
+toolbar:
+    buttons: reorder_toolbar

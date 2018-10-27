@@ -1,0 +1,11 @@
+list: $/sleepingsloth/posdata/models/receipts/columns.yaml
+modelClass: Sleepingsloth\Posdata\Models\Receipts
+title: Receipts
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

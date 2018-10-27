@@ -9,3 +9,8 @@ navigation:
         label: 'POS Setup'
         url: sleepingsloth/posdata/pos
         icon: icon-list-ol
+        sideMenu:
+            side-menu-item:
+                label: Receipts
+                url: sleepingsloth/posdata/receipts
+                icon: icon-newspaper-o

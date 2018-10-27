@@ -1,0 +1,22 @@
+columns:
+    id:
+        label: id
+        type: number
+    customer_id:
+        label: customer_id
+        type: number
+    vendor_name:
+        label: vendor_name
+        type: text
+    vendor_category:
+        label: vendor_category
+        type: text
+    location:
+        label: location
+        type: text
+    date:
+        label: date
+        type: text
+    total:
+        label: total
+        type: text
