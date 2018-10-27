@@ -26,12 +26,16 @@ function onSendReceipt(){
     $vendorName = $_POST["vendorName"];   
     $location = $_POST["location"];     
     $date = date('Y-m-d H:i:s');    
-        
-    $id = Db::table('sleepingsloth_posdata_receipts')->insertGetId(
+     
+  
+     $id = Db::table('sleepingsloth_posdata_receipts')->insertGetId(
         ['total' => $total, 'customer_id' => $phone, 'vendor_category' => $category, 'vendor_name' => $vendorName, 'location' => $location, 'date' => $date]
     );
     
-    return $id;
+    
+  return  Db::select('select max(id) as id from sleepingsloth_posdata_receipts');
+
+    
 }
 ?>
 ==

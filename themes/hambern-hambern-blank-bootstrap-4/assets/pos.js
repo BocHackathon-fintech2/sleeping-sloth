@@ -44,7 +44,7 @@ $(document).ready( function(){
                    data: { total: total, phone: phone, category: category, vendorName: vendorName, location:location  },
                    success: function(data) {
                          this.success(data).done(function() {
-                            
+                            console.log(data);
                          })
                    }});
                    
