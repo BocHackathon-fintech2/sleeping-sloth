@@ -1,0 +1,4 @@
+title: Items
+modelClass: Sleepingsloth\Posdata\Models\Items
+toolbar:
+    buttons: reorder_toolbar

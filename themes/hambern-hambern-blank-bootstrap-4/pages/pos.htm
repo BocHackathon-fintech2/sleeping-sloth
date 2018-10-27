@@ -33,9 +33,23 @@ function onSendReceipt(){
     );
     
     
-  return  Db::select('select max(id) as id from sleepingsloth_posdata_receipts');
+  $id =  Db::select('select max(id) as id from sleepingsloth_posdata_receipts');
 
+    return $id[0]->id;
+}
+
+function onSendItem(){
+    $price = $_POST["price"];  
+    $category = $_POST["category"];   
+    $name = $_POST["name"];   
+    $quantity = $_POST["quantity"];   
+    $id = $_POST["id"];     
     
+    $id = Db::table('sleepingsloth_posdata_receipts_items')->insert(
+        ['receipts_id' => $id, 'item_name' => $name, 'quantity' => $quantity, 'price' => $price, 'category' => $category ]
+    );
+    
+    return 'Succsess';
 }
 ?>
 ==
@@ -53,7 +67,7 @@ function onSendReceipt(){
   
      {% for record in records %}  
          {% if record.retailer_category == "0" %}
-            <div class="itemDiv" style="background-color:white; width:200px; float:left;  cursor:pointer; margin:6px;" data-price="{{record.price}}" data-name={{record.name}}>
+            <div class="itemDiv" style="background-color:white; width:200px; float:left;  cursor:pointer; margin:6px;" data-price="{{record.price}}" data-name={{record.name}} data-category={{record.item_category}}>
               <img class="" src=" {{record.logo.path }}" width="200px" height="150px" alt="Card image cap">
               <div style="text-align:center;">
                 <h5 class="">{{record.name}}</h5>

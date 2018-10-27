@@ -1,0 +1,19 @@
+columns:
+    id:
+        label: id
+        type: number
+    receipts_id:
+        label: receipts_id
+        type: number
+    item_name:
+        label: item_name
+        type: text
+    quantity:
+        label: quantity
+        type: number
+    price:
+        label: price
+        type: number
+    category:
+        label: category
+        type: text

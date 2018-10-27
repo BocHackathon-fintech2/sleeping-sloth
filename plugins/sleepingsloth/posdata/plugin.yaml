@@ -14,3 +14,7 @@ navigation:
                 label: Receipts
                 url: sleepingsloth/posdata/receipts
                 icon: icon-newspaper-o
+            side-menu-item2:
+                label: Items
+                url: sleepingsloth/posdata/items
+                icon: icon-sitemap
