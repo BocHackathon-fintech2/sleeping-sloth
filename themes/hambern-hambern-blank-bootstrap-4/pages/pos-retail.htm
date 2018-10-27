@@ -1,5 +1,5 @@
-title = "POS"
-url = "/pos"
+title = "Pos Retail"
+url = "/pos-retail"
 layout = "default"
 is_hidden = 0
 
@@ -28,12 +28,12 @@ function onStart(){
 {% set detailsUrlParameter = posItems.detailsUrlParameter %}
 
 
-<div class="row">
+<div  class="row">
   <div class="columnLeft" style="min-height:1000px; background-color:#f2f2f2; border-right:2px solid #CCC;">
     <h2>Products</h2>
   
-     {% for record in records %}  
-         {% if record.retailer_category == "0" %}
+     {% for record in records %} 
+      {% if record.retailer_category == "3" %}
             <div class="itemDiv" style="background-color:white; width:200px; float:left;  cursor:pointer; margin:6px;" data-price="{{record.price}}" data-name={{record.name}}>
               <img class="" src=" {{record.logo.path }}" width="200px" height="150px" alt="Card image cap">
               <div style="text-align:center;">
@@ -41,9 +41,8 @@ function onStart(){
                 <h5 class="">€ {{record.price}}</h5>
               </div>
             </div>
-        {% endif %}
+            {% endif %}
     {% endfor %} 
-    
     
   </div>
   <div class="columnRight" style="background-color:#FFF;">
@@ -74,40 +73,11 @@ function onStart(){
   
 
          
-        <div style="width:50%; float:left; margin-bottom:4px; padding:5px;"><button type="button" class="btn btn-success btn-block paymentMethod">Cash</button></div>
-         <div style="width:50%; float:left; margin-bottom:4px; padding:5px;"><button type="button" class="btn btn-warning btn-block paymentMethod">Credit Card</button></div>
-      
+        <div style="width:50%; float:left; margin-bottom:4px; padding:5px;"><button type="button" class="btn btn-info btn-block paymentMethod">Cash</button></div>
+         <div style="width:50%; float:left; margin-bottom:4px; padding:5px;"><button type="button" class="btn btn-info btn-block paymentMethod">Credit Card</button></div>
+        <div id="receiptMethod1" style="width:50%; float:left; margin-bottom:4px; padding:5px; display:none;"><button type="button" class="btn btn-info btn-block">Physical Receipt</button>  </div>
+        <div  id="receiptMethod2" style="width:50%; float:left; margin-bottom:4px; padding:5px; display:none;"><button type="button" class="btn btn-info btn-block">Digital Receipt</button>  </div>
   </div>
   
   
-</div>
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Receipt Method</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" style="height:80px;">
-          <div id="receiptMethod1" style="width:50%; float:left; margin-bottom:4px; padding:5px;">
-              <button type="button" class="btn btn-info btn-block">Physical Receipt</button>  
-            </div>
-        <div  id="receiptMethod2" style="width:50%; float:left; margin-bottom:4px; padding:5px;">
-            <button type="button" class="btn btn-info btn-block">Digital Receipt</button>  
-        </div>
-      </div>
-  
-    </div>
-  </div>
 </div>
