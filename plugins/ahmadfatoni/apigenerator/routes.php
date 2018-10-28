@@ -1,15 +1,12 @@
 <?php
 
-
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
-//header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
-header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization');
-
 Route::post('fatoni/generate/api', array('as' => 'fatoni.generate.api', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\ApiGeneratorController@generateApi'));
 Route::post('fatoni/update/api/{id}', array('as' => 'fatoni.update.api', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\ApiGeneratorController@updateApi'));
 Route::get('fatoni/delete/api/{id}', array('as' => 'fatoni.delete.api', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\ApiGeneratorController@deleteApi'));
 
+Route::resource('api/v1/getItemsCategoriesTotals', 'AhmadFatoni\ApiGenerator\Controllers\API\getItemsCategoriesTotalsController', ['except' => ['destroy', 'create', 'edit']]);
+Route::get('api/v1/getItemsCategoriesTotals/{id}/delete', ['as' => 'api/v1/getItemsCategoriesTotals.delete', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\getItemsCategoriesTotalsController@destroy']);
+Route::post('api/v1/getItemsCategoriesTotals', ['as' => 'api/v1/getItemsCategoriesTotals', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\getItemsCategoriesTotalsController@index']);
 
 Route::resource('api/v1/getReceipt', 'AhmadFatoni\ApiGenerator\Controllers\API\getReceiptsController', ['except' => ['destroy', 'create', 'edit']]);
 Route::get('api/v1/getReceipt/{id}/delete', ['as' => 'api/v1/getReceipt.delete', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\getReceiptsController@destroy']);
