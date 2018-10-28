@@ -12,3 +12,6 @@
 1.0.5:
     - 'Updated table sleepingsloth_posdata_receipts'
     - builder_table_update_sleepingsloth_posdata_receipts.php
+1.0.6:
+    - 'Updated table sleepingsloth_posdata_receipts_items'
+    - builder_table_update_sleepingsloth_posdata_receipts_items.php
