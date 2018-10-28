@@ -37,7 +37,7 @@ $(document).ready( function(){
              var total = parseFloat($("#totalPrice").val());
              var phone = $("#phone").val();
              var category = "Electronic Store";
-             var vendorName = "Electronics Store";
+             var vendorName = "Mister Gadge";
              var location = "Paphos";
              
              

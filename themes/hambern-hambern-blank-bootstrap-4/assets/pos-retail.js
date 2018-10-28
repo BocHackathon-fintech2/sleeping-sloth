@@ -37,7 +37,7 @@ $(document).ready( function(){
              var total = parseFloat($("#totalPrice").val());
              var phone = $("#phone").val();
              var category = "Clothing Store";
-             var vendorName = "Clothing Store";
+             var vendorName = "Uniqlo";
              var location = "Nicosia";
              
              
